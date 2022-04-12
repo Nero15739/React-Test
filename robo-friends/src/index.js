@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Hello from './Hello';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
+import {robots} from './robots';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>hello</h1>
-    <Hello greeting={'Hello '+'react nigga!!'} numberone={'4'} />
+    <div>
+    <App />
+    </div>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

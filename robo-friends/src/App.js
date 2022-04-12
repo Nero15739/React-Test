@@ -1,29 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import CardList from './cardList';
+import { robots } from "./robots";
+import SearchBox from './SearchBox';
 
-class App extends React.Component {
-  render(){
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload LoL.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learning React
-        </a>
-      </header>
-    </div>
-  );
-  }
+const state = {
+    robots:robots,
+    searchfeild:'';
+}
+
+
+
+const App = () =>{
+    return(
+        <div className='tc'>
+            <h1 className="f1 tc">RoboFriends</h1>
+            <SearchBox />
+            <CardList robots={robots} />
+            
+        </div>
+    );
 }
 
 export default App;
